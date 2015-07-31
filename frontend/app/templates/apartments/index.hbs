@@ -1,0 +1,11 @@
+<h1>Apartments</h1>
+
+{{#each apartment in model}}
+  <h3>{{apartment.name}}</h3>
+  <ul>
+    <li>Address: {{apartment.address}}</li>
+    <li>Price per Month: ${{apartment.price}}</li>
+    <li>Listing: {{apartment.listingUrl}}</li>
+    <li>Available? {{apartment.available}}</li>
+  </ul>
+{{/each}}
