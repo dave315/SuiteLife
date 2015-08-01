@@ -11,10 +11,9 @@ export default Ember.Route.extend({
         _this.transitionTo('apartments.show', apartment);
       });
     },
-    cancel: function() {
-      console.log('+- cancel action in friends new route');
-
-      return true;
+    cancel() {
+      this.transitionTo('apartments.index');
+      return false;
     }
   }
 });
