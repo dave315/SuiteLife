@@ -18,6 +18,7 @@ class Api::V1::ApartmentsController < ApplicationController
   def create
     @apartment = Apartment.new(apartment_params)
     @apartment.save!
+    render json: @apartment
   end
 
   protected
