@@ -2,7 +2,9 @@
 
 {{#each apartment in model}}
   <ul>
-    <li>Address: {{apartment.address}}</li>
+    {{#link-to 'apartments.show' apartment}}
+      <li>Address: {{apartment.address}}</li>
+    {{/link-to}}
     <li>Price per Month: ${{apartment.price}}</li>
     <li>Listing: {{apartment.listingUrl}}</li>
     <li>Available? {{apartment.available}}</li>
