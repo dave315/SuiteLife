@@ -8,5 +8,6 @@
     <li>Price per Month: ${{apartment.price}}</li>
     <li>Listing: {{apartment.listingUrl}}</li>
     <li>Available? {{apartment.available}}</li>
+    <button {{action "delete" apartment on="click"}}>Delete</button>
   </ul>
 {{/each}}

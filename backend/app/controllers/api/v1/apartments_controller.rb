@@ -23,6 +23,11 @@ class Api::V1::ApartmentsController < ApplicationController
     render json: @apartment
   end
 
+  def destroy
+    @apartment = Apartment.find(params[:id])
+    @apartment.destroy
+  end
+
   protected
   def apartment_params
     params.require(:apartment).permit(:address,
