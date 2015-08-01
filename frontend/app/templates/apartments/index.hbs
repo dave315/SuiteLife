@@ -1,5 +1,5 @@
 <h1>Total Apartments: {{model.length}}</h1>
-
+{{link-to 'Add New Listing' 'apartments.new'}}
 {{#each apartment in model}}
   <ul>
     {{#link-to 'apartments.show' apartment}}
