@@ -11,9 +11,8 @@ export default Ember.Route.extend({
         _this.transitionTo('apartments.show', apartment);
       });
     },
-    cancel() {
-      this.transitionTo('apartments.index');
-      return false;
+    cancel: function() {
+      this.transitionTo('apartments');
     }
   }
 });
