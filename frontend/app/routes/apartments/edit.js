@@ -10,7 +10,7 @@ export default Ember.Route.extend({
         });
       },
       cancel(apartment) {
-        this.transitionTo('apartments.show', apartment)
+        this.transitionTo('apartments.show', apartment);
       }
     }
 });

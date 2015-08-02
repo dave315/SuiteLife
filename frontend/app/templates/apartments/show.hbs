@@ -1,14 +1,25 @@
-<ul>
-  <li>Available? {{model.available}}</li>
-  <li>Price: ${{model.price}}</li>
-  <li>Address: {{model.address}}</li>
-  <li>City: {{model.city}}</li>
-  <li>State: {{model.state}}</li>
-  <li>Zip: {{model.zip}}</li>
-  <li>Photo: {{model.photoUrl}}</li>
-  <li>Listing: {{model.listingUrl}}</li>
-  <li>Description: {{model.description}}</li>
-</ul>
+{{#md-card title=model.address
+    titleClass="orange-text"
+    image=model.photoUrl
+    id=model.id}}
 
-{{link-to 'Edit' 'apartments.edit' model}}
-{{link-to 'Back' 'apartments'}}
+    {{#md-card-content}}
+      {{model.description}}
+
+      <ul>
+        <li>Available? {{model.available}}</li>
+        <li>Price: ${{model.price}}</li>
+        <li>Source: {{model.listingUrl}}</li>
+      </ul>
+      <h5>Location</h5>
+      <strong>City:</strong> {{model.city}}
+      <strong>State:</strong> {{model.state}}
+      <strong>Zip:</strong> {{model.zip}}
+    {{/md-card-content}}
+
+    {{#md-card-action}}
+        {{#link-to 'apartments.edit' model}}Edit{{/link-to}}
+        {{#link-to 'apartments'}}Back{{/link-to}}
+    {{/md-card-action}}
+
+{{/md-card}}

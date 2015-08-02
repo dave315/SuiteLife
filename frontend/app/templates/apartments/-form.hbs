@@ -2,37 +2,37 @@
   <form {{action "save" model on="submit"}}>
     <p>
       <label>Address:
-        {{input value=model.address}}
+        {{md-input value=model.address}}
       </label>
     </p>
     <p>
       <label>City:
-        {{input value=model.city}}
+        {{md-input value=model.city}}
       </label>
     </p>
     <p>
       <label>State:
-        {{input value=model.state}}
+        {{md-input value=model.state}}
       </label>
     </p>
     <p>
       <label>Zip:
-        {{input value=model.zip}}
+        {{md-input value=model.zip}}
       </label>
     </p>
     <p>
       <label>Photo URL:
-        {{input value=model.photoUrl}}
+        {{md-input value=model.photoUrl}}
       </label>
     </p>
     <p>
       <label>listing_url:
-        {{input value=model.listingUrl}}
+        {{md-input value=model.listingUrl}}
       </label>
     </p>
     <p>
       <label>Price:
-        {{input value=model.price}}
+        {{md-input value=model.price}}
       </label>
     </p>
     <p>
@@ -42,10 +42,9 @@
     </p>
     <p>
       <label>Description:
-        {{input value=model.description}}
+        {{md-input value=model.description}}
       </label>
     </p>
-
     <input class='md-btn-submit' type="submit" value="Save"/>
   </form>
   <button {{action "cancel" model on="click"}}>Cancel</button>

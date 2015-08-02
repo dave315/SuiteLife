@@ -1,5 +1,8 @@
 /* jshint node: true */
-
+contentSecurityPolicy = {
+  'style-src': '*',
+  'img-src': '*'
+}
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'apartment-listing',

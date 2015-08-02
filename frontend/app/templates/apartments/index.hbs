@@ -1,3 +1,4 @@
+
 {{#each apartment in model}}
   {{#md-card title=apartment.address
       image=apartment.photoUrl
@@ -6,8 +7,13 @@
 
       {{#md-card-content}}
         <br>Price: ${{apartment.price}}
-        <br>Available? {{apartment.available}}
-        <br>{{link-to 'Edit' 'apartments.edit' apartment}}
+        <br>Available? {{apartment.available}}<br>
+
+        {{#link-to 'apartments.show' apartment}}
+          {{md-btn text='Details'
+                   class='teal accent-2'}}
+        {{/link-to}}
+
         {{md-btn text='Delete'
                  action="delete"
                  actionArg=apartment
@@ -20,5 +26,5 @@
         {{apartment.description}}
       {{/md-card-reveal}}
 
-  {{/md-card}}
+    {{/md-card}}
 {{/each}}
