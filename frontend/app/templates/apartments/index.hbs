@@ -1,11 +1,35 @@
-<h1>Apartments</h1>
-{{link-to 'New' 'apartments.new'}}
-{{#each apartment in model}}
-  <ul>
-    <li><strong>Address:</strong> {{#link-to 'apartments.show' apartment}}{{apartment.address}}{{/link-to}}</li>
-    <li><strong>Price:</strong> ${{apartment.price}}</li>
-    <li><strong>Listing:</strong> {{apartment.listingUrl}}</li>
-    <li><strong>Available:</strong> {{apartment.available}}</li>
-    <button {{action "delete" apartment on="click"}}>Delete</button>
-  </ul>
-{{/each}}
+<div class="apt-listing">
+  {{#each apartment in model}}
+    {{#md-card title=apartment.address
+        image=apartment.photoUrl
+        activator=true
+        id="card-reveal"}}
+
+        {{#md-card-content}}
+          <br>Price: ${{apartment.price}}
+          <br>Available? {{apartment.available}}
+          <br>{{link-to 'Edit' 'apartments.edit' apartment}}
+          {{md-btn text='Delete'
+                   action="delete"
+                   actionArg=apartment
+                   class='teal accent-3'}}
+        {{/md-card-content}}
+
+        {{#md-card-reveal}}
+          Source: {{apartment.listingUrl}}
+          <br>Description:<br>
+          {{apartment.description}}
+        {{/md-card-reveal}}
+
+    {{/md-card}}
+
+      <!-- <img src={{apartment.photoUrl}}>
+      <ul>
+        <li><strong>Address:</strong> {{#link-to 'apartments.show' apartment}}{{apartment.address}}{{/link-to}}</li>
+        <li><strong>Price:</strong> ${{apartment.price}}</li>
+        <li><strong>Listing:</strong> {{apartment.listingUrl}}</li>
+        <li><strong>Available:</strong> {{apartment.available}}</li>
+        <button {{action "delete" apartment on="click"}}>Delete</button>
+      </ul> -->
+  {{/each}}
+  </div>
