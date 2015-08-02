@@ -1,13 +1,11 @@
-<h1>Total Apartments: {{model.length}}</h1>
-{{link-to 'Add New Listing' 'apartments.new'}}
+<h1>Apartments</h1>
+{{link-to 'New' 'apartments.new'}}
 {{#each apartment in model}}
   <ul>
-    {{#link-to 'apartments.show' apartment}}
-      <li>Address: {{apartment.address}}</li>
-    {{/link-to}}
-    <li>Price per Month: ${{apartment.price}}</li>
-    <li>Listing: {{apartment.listingUrl}}</li>
-    <li>Available? {{apartment.available}}</li>
+    <li><strong>Address:</strong> {{#link-to 'apartments.show' apartment}}{{apartment.address}}{{/link-to}}</li>
+    <li><strong>Price:</strong> ${{apartment.price}}</li>
+    <li><strong>Listing:</strong> {{apartment.listingUrl}}</li>
+    <li><strong>Available:</strong> {{apartment.available}}</li>
     <button {{action "delete" apartment on="click"}}>Delete</button>
   </ul>
 {{/each}}

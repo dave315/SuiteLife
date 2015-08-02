@@ -1,8 +1,13 @@
 <ul>
-  <li>Address: {{model.address}}</li>
-  <li>Price per Month: ${{model.price}}</li>
-  <li>Listing: {{model.listingUrl}}</li>
   <li>Available? {{model.available}}</li>
+  <li>Price: ${{model.price}}</li>
+  <li>Address: {{model.address}}</li>
+  <li>City: {{model.city}}</li>
+  <li>State: {{model.state}}</li>
+  <li>Zip: {{model.zip}}</li>
+  <li>Photo: ${{model.photoUrl}}</li>
+  <li>Listing: {{model.listingUrl}}</li>
+  <li>Description: {{model.description}}</li>
 </ul>
 
 {{link-to 'Edit' 'apartments.edit' model}}
