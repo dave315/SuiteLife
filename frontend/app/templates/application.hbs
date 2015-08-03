@@ -1,8 +1,8 @@
-{{#md-navbar name='Apartment Listings' class='teal darken-1'}}
+{{#md-navbar name='SuiteLife' class='teal darken-1' homeRoute="apartments"}}
   <!-- A workaround to get the "active" class
     to apply to the active <li> automatically -->
     {{#link-to 'apartments' tagName='li'}}
-       {{link-to 'Apartments' 'apartments'}}
+       {{link-to 'List' 'apartments'}}
      {{/link-to}}
      {{#link-to 'apartments.new' tagName='li'}}
        {{link-to 'New' 'apartments.new'}}
