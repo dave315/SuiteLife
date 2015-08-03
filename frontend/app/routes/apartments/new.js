@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function(){
+  model(){
     return this.store.createRecord('apartment');
   },
   actions: {
@@ -13,6 +13,7 @@ export default Ember.Route.extend({
     },
     cancel: function() {
       this.transitionTo('apartments');
+      return false;
     }
   }
 });

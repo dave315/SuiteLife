@@ -1,1 +1,14 @@
-{{outlet}}
+{{#md-navbar name='Apartment Listings' class='teal darken-1'}}
+  <!-- A workaround to get the "active" class
+    to apply to the active <li> automatically -->
+    {{#link-to 'apartments' tagName='li'}}
+       {{link-to 'Apartments' 'apartments'}}
+     {{/link-to}}
+     {{#link-to 'apartments.new' tagName='li'}}
+       {{link-to 'New' 'apartments.new'}}
+     {{/link-to}}
+{{/md-navbar}}
+
+<div class="main-container">
+  {{outlet}}
+</div>

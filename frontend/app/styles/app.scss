@@ -1,0 +1,24 @@
+@import 'materialize';
+@import 'ember-cli-materialize';
+
+$lightblue : '#039BE';
+
+.main-container {
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+#card-reveal {
+  width: 300px;
+  display: inline-block;
+  margin: 10px;
+
+  .activator {
+    height: 300px;
+  }
+}
+
+.form-container {
+  margin: 0 250px;
+}

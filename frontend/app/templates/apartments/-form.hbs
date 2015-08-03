@@ -1,55 +1,51 @@
-<div>
-  <h2>Apartment Details</h2>
-    <p>{{model.address}}</p>
-    <p>{{model.city}}</p>
+<div class="form-container">
+  <form {{action "save" model on="submit"}}>
+    <p>
+      <label>Address:
+        {{md-input value=model.address}}
+      </label>
+    </p>
+    <p>
+      <label>City:
+        {{md-input value=model.city}}
+      </label>
+    </p>
+    <p>
+      <label>State:
+        {{md-input value=model.state}}
+      </label>
+    </p>
+    <p>
+      <label>Zip:
+        {{md-input value=model.zip}}
+      </label>
+    </p>
+    <p>
+      <label>Photo URL:
+        {{md-input value=model.photoUrl}}
+      </label>
+    </p>
+    <p>
+      <label>listing_url:
+        {{md-input value=model.listingUrl}}
+      </label>
+    </p>
+    <p>
+      <label>Price:
+        {{md-input value=model.price}}
+      </label>
+    </p>
+    <p>
+      <label>Available:
+        {{md-check checked=model.available}}
+      </label>
+    </p>
+    <p>
+      <label>Description:
+        {{md-input value=model.description}}
+      </label>
+    </p>
+    <input type="submit" value="Save"/>
+  </form>
+  <button {{action "cancel" model on="click"}}>Cancel</button>
 </div>
-
-<form {{action "save" model on="submit"}}>
-  <p>
-    <label>Address:
-      {{input value=model.address}}
-    </label>
-  </p>
-  <p>
-    <label>City:
-      {{input value=model.city}}
-    </label>
-  </p>
-  <p>
-    <label>State:
-      {{input value=model.state}}
-    </label>
-  </p>
-  <p>
-    <label>Zip:
-      {{input value=model.zip}}
-    </label>
-  </p>
-  <p>
-    <label>Photo URL:
-      {{input value=model.photoUrl}}
-    </label>
-  </p>
-  <p>
-    <label>listing_url:
-      {{input value=model.listingUrl}}
-    </label>
-  </p>
-  <p>
-    <label>Price:
-      {{input value=model.price}}
-    </label>
-  </p>
-  <p>
-    <label>Available:
-      {{input type="checkbox" checked=model.available}}
-    </label>
-  </p>
-  <p>
-    <label>Description:
-      {{input value=model.description}}
-    </label>
-  </p>
-  <input type="submit" value="Save"/>
-</form>
-<button {{action "cancel" model on="click"}}>Cancel</button>
