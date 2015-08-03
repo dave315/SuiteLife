@@ -20,5 +20,11 @@ $lightblue : '#039BE';
 }
 
 .form-container {
-  margin: 0 250px;
+  margin: 0 200px;
+}
+
+@media screen and (max-width: 1000px) {
+  .form-container {
+    margin: 0;
+  }
 }
