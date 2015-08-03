@@ -7,6 +7,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('apartments', function(){
+  });
+
+  this.route('apartments', function() {
     this.route('new');
     this.route('show', { path: ':apartment_id' });
     this.route('edit', { path: ':apartment_id/edit' });
